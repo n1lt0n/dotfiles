@@ -162,6 +162,10 @@ vim.wo.number = true
 -- Make line numbers relative to the cursor position
 vim.wo.relativenumber = true
 
+-- set tab as 2 spaces
+vim.o.shiftwidth=2
+vim.o.tabstop=2
+
 -- Enable mouse mode
 vim.o.mouse = 'a'
 
