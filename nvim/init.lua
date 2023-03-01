@@ -159,6 +159,9 @@ vim.o.hlsearch = false
 -- Make line numbers default
 vim.wo.number = true
 
+-- Make line numbers relative to the cursor position
+vim.wo.relativenumber = true
+
 -- Enable mouse mode
 vim.o.mouse = 'a'
 
@@ -185,11 +188,31 @@ vim.o.updatetime = 250
 vim.o.timeout = true
 vim.o.timeoutlen = 300
 
+-- show color column at 80 column
+vim.o.colorcolumn="80"
+
 -- Set completeopt to have a better completion experience
 vim.o.completeopt = 'menuone,noselect'
 
 -- NOTE: You should make sure your terminal supports this
 vim.o.termguicolors = true
+
+-- set no show mode
+vim.cmd([[ set noshowmode ]])
+
+-- set no write backup 
+vim.cmd([[ set nowritebackup ]])
+vim.cmd([[ set nobackup ]])
+
+-- set cursor lines
+vim.cmd([[ set cursorline ]])
+
+-- when vertical split, always below
+vim.o.splitbelow=true
+
+-- when horizontal split, always to the right
+vim.o.splitright=true
+
 
 -- [[ Basic Keymaps ]]
 
