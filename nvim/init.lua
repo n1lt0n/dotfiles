@@ -95,6 +95,11 @@ require('lazy').setup({
     },
   },
 
+  { -- bufferline
+    'akinsho/bufferline.nvim',
+    dependencies='nvim-tree/nvim-web-devicons',
+  },
+
   { -- Add indentation guides even on blank lines
     'lukas-reineke/indent-blankline.nvim',
     -- Enable `lukas-reineke/indent-blankline.nvim`
@@ -249,6 +254,13 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   group = highlight_group,
   pattern = '*',
 })
+
+
+-- [[ Bufferline ]]
+require("bufferline").setup{}
+-- Bufferline keymap
+vim.api.nvim_set_keymap('n', '<S-l>', ':bnext<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<S-h>', ':bprevious<CR>', { noremap = true, silent = true })
 
 -- [[ Configure Telescope File Browser ]]
 require("telescope").load_extension "file_browser"
