@@ -264,11 +264,11 @@ vim.api.nvim_set_keymap('n', '<S-h>', ':bprevious<CR>', { noremap = true, silent
 
 -- [[ Configure Telescope File Browser ]]
 require("telescope").load_extension "file_browser"
-vim.api.nvim_set_keymap(
+vim.keymap.set(
   'n',
   '<space>fb',
   ':Telescope file_browser path=%:p:h select_buffer=true<CR>',
-  { noremap = true }
+  { noremap = true, desc = '[F]ile [B]rowser' }
 )
 
 -- [[ Configure Telescope ]]
