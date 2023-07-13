@@ -126,5 +126,6 @@ alias v="nvim"
 alias vim="nvim"
 alias g="git"
 alias dk="docker"
+alias t="terraform"
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
