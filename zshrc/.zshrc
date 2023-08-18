@@ -127,5 +127,9 @@ alias vim="nvim"
 alias g="git"
 alias dk="docker"
 alias t="terraform"
+
+# ctrl + backspace
+bindkey '^H' backward-kill-word
+bindkey '5~' kill-word
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
