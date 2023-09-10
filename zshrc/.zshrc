@@ -128,6 +128,7 @@ alias g="git"
 alias dk="docker"
 alias t="terraform"
 alias yt="yt-dlp --extract-audio --embed-thumbnail --embed-metadata --audio-quality 0  --audio-format mp3 "
+alias ytv="yt-dlp --embed-thumbnail --embed-metadata --audio-quality 0 "
 
 # ctrl + backspace
 bindkey '^H' backward-kill-word
