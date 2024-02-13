@@ -120,8 +120,8 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias ls="exa --icons"
-alias ll="exa --icons -lgih"
+#alias ls="exa --icons"
+#alias ll="exa --icons -lgih"
 alias v="nvim"
 alias vim="nvim"
 alias g="git"
@@ -138,3 +138,13 @@ bindkey '5~' kill-word
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 PATH=$PATH:/snap/bin
+
+
+# Load Angular CLI autocompletion.
+source <(ng completion script)
+
+# Download Znap, if it's not there yet.
+[[ -r ~/Repos/znap/znap.zsh ]] ||
+    git clone --depth 1 -- \
+        https://github.com/marlonrichert/zsh-snap.git ~/Repos/znap
+source ~/Repos/znap/znap.zsh  # Start Znap
