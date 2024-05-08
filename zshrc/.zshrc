@@ -138,3 +138,7 @@ bindkey '5~' kill-word
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 PATH=$PATH:/snap/bin
+
+
+# Load Angular CLI autocompletion.
+source <(ng completion script)
