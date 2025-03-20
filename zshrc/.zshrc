@@ -138,5 +138,14 @@ bindkey '5~' kill-word
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
+# append completions to fpath
+fpath=(${ASDF_DATA_DIR:-$HOME/.asdf}/completions $fpath)
+# initialise completions with ZSH's compinit
+autoload -Uz compinit && compinit
+
 # Load Angular CLI autocompletion.
 source <(ng completion script)
+
+
